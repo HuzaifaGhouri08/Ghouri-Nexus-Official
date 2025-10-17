@@ -1,0 +1,232 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useInView } from 'react-intersection-observer';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import {
+  Code, Gamepad2, Globe, Palette,
+  ShoppingCart, Users, Star, ArrowRight, Play,
+  Zap, Target, Award
+} from 'lucide-react';
+
+// Main Home Component
+export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [counts, setCounts] = useState([0, 0, 0, 0]);
+
+  const features = [
+    { icon: <Globe className="h-8 w-8" />, title: "Web Development", description: "Modern, responsive websites built with cutting-edge technologies" },
+    { icon: <Palette className="h-8 w-8" />, title: "UI/UX Design", description: "Beautiful, user-friendly interfaces that convert visitors into customers" },
+    { icon: <ShoppingCart className="h-8 w-8" />, title: "Shopify Stores", description: "Custom e-commerce solutions with premium themes and functionality" },
+  { icon: <Zap className="h-8 w-8" />, title: "AI Visuals", description: "Innovative AI-powered photo and video Generation for next-gen marketing" }
+  ];
+
+  const stats = [
+    { number: 80, label: "Projects Completed", icon: <Target className="h-6 w-6" />, suffix: "+" },
+    { number: 50, label: "Happy Clients", icon: <Users className="h-6 w-6" />, suffix: "+" },
+    { number: 100, label: "Satisfaction Rate", icon: <Star className="h-6 w-6" />, suffix: "%" },
+    { number: 24, label: "Support Available", icon: <Award className="h-6 w-6" />, suffix: "/7" }
+  ];
+
+  const testimonials = [
+    { name: "Ahmed Khan", role: "E-Commerce Owner", content: "Ghouri Nexus transformed our online presence with a stunning Shopify store. Sales increased by 200%", rating: 5 },
+    { name: "Sana Tariq", role: "Marketing Manager", content: "The AI video ads created by Ghouri Nexus took our campaigns to the next level. Engagement and conversions skyrocketed.", rating: 5 },
+    { name: "Sarah Ahmed", role: "Startup Founder", content: "Their UI/UX design skills are exceptional. Our app's user engagement improved dramatically.", rating: 5 },
+    { name: "Muhammad Ali", role: "Business Owner", content: "Professional service, timely delivery, and ongoing support. Highly recommended.", rating: 5 },
+    { name: "Fatima Noor", role: "Photographer", content: "The AI photo editing tools are a game changer, My portfolio looks stunning and professional.", rating: 5 },
+    { name: "Usman Raza", role: "Shopify Merchant", content: "Their Shopify expertise helped me launch my store quickly and efficiently. Great support.", rating: 5 },
+    { name: "Ayesha Siddiqui", role: "Designer", content: "Creative team with a strong sense of aesthetics. My website looks beautiful and works perfectly.", rating: 5 },
+    { name: "Bilal Hussain", role: "Developer", content: "Collaborating with Ghouri Nexus was smooth and productive. Highly skilled professionals.", rating: 5 },
+  ];
+
+  // Intersection Observer for stats animation
+  const { ref: statsRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  useEffect(() => {
+    if (inView) {
+      stats.forEach((stat, i) => {
+        let start = 0;
+        const end = stat.number;
+        const duration = 1500;
+        const stepTime = Math.abs(Math.floor(duration / end));
+
+        const timer = setInterval(() => {
+          start += 1;
+          setCounts(prev => {
+            const newCounts = [...prev];
+            newCounts[i] = start;
+            return newCounts;
+          });
+          if (start >= end) clearInterval(timer);
+        }, stepTime);
+      });
+    }
+  }, [inView]);
+
+  // Testimonials auto-slider
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="min-h-screen">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900"></div>
+        {/* Enhanced Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-[32rem] h-[32rem] bg-cyan-400/30 rounded-full blur-[120px] animate-pulse shadow-2xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[28rem] h-[28rem] bg-purple-500/30 rounded-full blur-[100px] animate-pulse shadow-2xl"></div>
+          <div className="absolute top-1/2 left-1/2 w-[18rem] h-[18rem] bg-emerald-400/30 rounded-full blur-[80px] animate-bounce shadow-xl"></div>
+          <div className="absolute top-10 right-1/3 w-40 h-40 bg-pink-500/30 rounded-full blur-[60px] animate-spin-slow shadow-xl"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-float">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <span className=" text-white">Ghouri Nexus</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Where <span className="text-cyan-400 font-semibold">Software Development</span> meets{' '}
+              <span className="text-purple-400 font-semibold">Gaming Innovation</span>
+            </p>
+            <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+              We deliver beautiful Websites and profitable E-Commerce platforms. Innovate your marketing with AI Visuals and secure your investment with meticulous bug detection & code repair.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/services">
+                <Button size="lg" className="group glow-effect bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 text-lg">
+                  <Code className="mr-2 h-5 w-5" />
+                  Our Services
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/gaming">
+                <Button size="lg" variant="outline" className="group border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 text-lg">
+                  <Gamepad2 className="mr-2 h-5 w-5" />
+                  View Games
+                  <Play className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Features Section */}
+      <section className="py-20 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Expertise</h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Combining technical excellence with creative innovation to deliver exceptional digital solutions
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-cyan-500/50 transition-all">
+                <CardContent className="cursor-grab p-6 text-center">
+                  <div className="text-cyan-400 mb-4 flex justify-center">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section ref={statsRef} className="py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="text-cyan-400 mb-2 flex justify-center">{stat.icon}</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {counts[index]}{stat.suffix || ""}
+                </div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Satisfied Clients</h2>
+            <p className="text-xl text-gray-400">Don't Just Take Our Word For It - See What Our Some Clients Say</p>
+          </div>
+          <div className="relative max-w-4xl mx-auto">
+            <Card className="bg-slate-800/50 border-slate-700">
+              <CardContent className="p-8 text-center">
+                <div className="flex justify-center mb-4">
+                  {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-xl text-gray-300 mb-6 italic">
+                  "{testimonials[currentSlide].content}"
+                </blockquote>
+                <div>
+                  <div className="font-semibold text-white text-lg">{testimonials[currentSlide].name}</div>
+                  <div className="text-cyan-400">{testimonials[currentSlide].role}</div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex justify-center mt-6 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 rounded-full ${index === currentSlide ? 'bg-cyan-400' : 'bg-gray-600'}`}
+                  onClick={() => setCurrentSlide(index)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-12 border border-slate-700">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Ready to <span className="text-cyan-400">Transform</span> Your Digital Presence?
+            </h2>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              Let's discuss your project and create something amazing together
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4">
+                  <Zap className="mr-2 h-5 w-5" />
+                  Start Your Project
+                </Button>
+              </Link>
+              <Link href="/portfolio">
+                <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-400 px-8 py-4">
+                  View Our Work
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
