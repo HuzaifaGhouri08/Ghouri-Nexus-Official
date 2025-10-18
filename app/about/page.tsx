@@ -21,25 +21,25 @@ const team = [
   {
     name: "Huzaifa Ghouri",
     role: "Founder & CEO",
-    image: "/team/huzaifa.jpg",
+    image: "/team/huzaifa.jpeg",
     description: "Visionary leader in business strategy and brand launching, Agentic AI engineer, Full-stack web developer."
   },
   {
     name: "Michael Jordan",
     role: "Operations Manager",
-    image: "/logo.png",
+    image: "team/michael.jpeg",
     description: "Optimizes workflows, manages critical resources, and significantly improves operational efficiency."
   },
   {
     name: "Syeda Ayesha",
     role: "HR Manager",
-    image: "logo.png",
+    image: "public/team/ayesha.jpeg",
     description: "Manages talent acquisition, employee development, and fosters a positive, inclusive workplace culture."
   },
   {
     name: "Shehriyar Khan",
     role: "Managing Director",
-    image: "/team/shehriyar.jpeg",
+    image: "/public/team/shehriyar.jpeg",
     description: "Experienced director overseeing daily operations, project management, and strategic execution."
   },
   {
