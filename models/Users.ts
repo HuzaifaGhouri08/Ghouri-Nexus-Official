@@ -1,26 +1,30 @@
-import mongoose from 'mongoose';
+import mongoose, { Document, Schema } from 'mongoose';
 
-// 1. Define your Schema
-const UserSchema = new new mongoose.Schema({
+// 1. Define the TypeScript Interface for a User Document
+// This ensures that all documents created/returned by Mongoose are correctly typed.
+export interface IUser extends Document {
+    name: string;
+    email: string;
+    // Mongoose properties like ._id are inherited from Document
+}
+
+// 2. Define your Schema, using the interface
+const UserSchema = new Schema<IUser>({
     name: {
-        type: String
+        type: String,
+        // Optional: required: true, 
     },
     email: {
         type: String,
-        unique: true
+        unique: true,
+        // Optional: required: true,
     },
 });
 
-// 2. Explicitly check and export
-let User;
-
-// If mongoose.models.User exists (i.e., it was already created)
-if (mongoose.models.User) {
-    // Retrieve the existing model
-    User = mongoose.model('User');
-} else {
-    // Create the new model
-    User = mongoose.model('User', UserSchema);
-}
+// 3. Explicitly export the model (using the ternary operator and explicit casting)
+// The 'as mongoose.Model<IUser>' explicitly tells TypeScript the final type.
+const User = (mongoose.models.User || 
+    mongoose.model<IUser>('User', UserSchema)
+) as mongoose.Model<IUser>;
 
 export default User;
