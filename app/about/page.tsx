@@ -21,7 +21,7 @@ const team = [
   {
     name: "Huzaifa Ghouri",
     role: "Founder & CEO",
-    image: "team/huzaifa.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/huzaifa.jpeg?auto=compress&cs=tinysrgb&w=400",
     description: "Visionary leader in business strategy and brand launching, Agentic AI engineer, Full-stack web developer."
   },
   {
