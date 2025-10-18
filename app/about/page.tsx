@@ -173,11 +173,11 @@ const team = [
                       <div className="text-gray-400">Founded</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                      <div className="text-3xl font-bold text-purple-400 mb-2">80+</div>
                       <div className="text-gray-400">Projects</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-emerald-400 mb-2">30+</div>
+                      <div className="text-3xl font-bold text-emerald-400 mb-2">50+</div>
                       <div className="text-gray-400">Clients</div>
                     </div>
                     <div className="text-center">
