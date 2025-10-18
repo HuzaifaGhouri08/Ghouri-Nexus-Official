@@ -27,13 +27,13 @@ const team = [
   {
     name: "Michael Jordan",
     role: "Operations Manager",
-    image: "/michael.jpeg",
+    image: "/Michaels.jpeg",
     description: "Optimizes workflows, manages critical resources, and significantly improves operational efficiency."
   },
   {
     name: "Syeda Ayesha",
     role: "HR Manager",
-    image: "/ayesha.jpeg",
+    image: "/Ayesha.jpeg",
     description: "Manages talent acquisition, employee development, and fosters a positive, inclusive workplace culture."
   },
   {
