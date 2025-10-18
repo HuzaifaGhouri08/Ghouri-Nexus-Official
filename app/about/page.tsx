@@ -21,74 +21,74 @@ const team = [
   {
     name: "Huzaifa Ghouri",
     role: "Founder & CEO",
-    image: "/team/huzaifa.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/huzaifa.jpeg",
     description: "Visionary leader in business strategy and brand launching, Agentic AI engineer, Full-stack web developer."
   },
   {
     name: "Michael Jordan",
     role: "Operations Manager",
-    image: "team/michaels.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/michaels.jpeg",
     description: "Optimizes workflows, manages critical resources, and significantly improves operational efficiency."
   },
   {
     name: "Syeda Ayesha",
     role: "HR Manager",
-    image: "team/ayesha.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/ayesha.jpeg",
     description: "Manages talent acquisition, employee development, and fosters a positive, inclusive workplace culture."
   },
   {
     name: "Shehriyar Khan",
     role: "Managing Director",
-    image: "team/shehriyar.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/shehriyar.jpeg",
     description: "Experienced director overseeing daily operations, project management, and strategic execution."
   },
   {
     name: "Shaukat Ali",
     role: "Project Manager",
-    image: "team/shaukat.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/shaukat.jpeg",
     description: "Drives projects from concept to completion. Ensuring clear communication between the team and stakeholders."
   },
   {
     name: "Dua Wilson",
     role: "UI/UX Design Lead",
-    image: "team/dua.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/dua.jpeg",
     description: "Designs intuitive, user-centric interfaces using Figma, Adobe XD, and thorough user research methodologies."
   },
  
   {
     name: "Faraz Ahmed",
     role: "Front-End Lead",
-    image: "team/faraz.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/faraz.jpeg",
     description: "Leads the development of responsive UI using modern JavaScript frameworks. and performance optimization."
   },
   {
     name: "Muhammad Waleed ",
     role: "Backend Lead",
-    image: "team/waleed.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/waleed.jpeg",
     description: "Oversees the server-side Engineering, database design, and API development. Ensures the back-end systems are secure."
   },
    {
     name: "Romaisa Khan",
     role: "Game Development Lead",
-    image: "team/romaisa.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/romaisa.jpeg",
     description: "Leads engaging game concept, design and development using Unity Engine, C++, and innovative mechanics."
   },
   {
     name: "Humza Tariq",
     role: "Shopify Lead",
-    image: "team/humza.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/humza.jpeg",
     description: "Expert in Shopify e-commerce solutions, store optimization, and advanced analytics for sales growth."
   },
   {
     name: "Anum Fatima",
     role: "Social Media Lead",
-    image: "team/anum.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/anum.jpeg",
     description: "Develops engaging content and manages impactful social media campaigns for maximum brand growth."
   },
   {
     name: "Atif Iqbal",
     role: "Prompt Engineering Lead",
-    image: "team/atif.jpeg?auto=compress&cs=tinysrgb&w=400",
+    image: "/team/atif.jpeg",
     description: "Leads the creation of Custom Performance AI Chatbots, intelligent AI agents, and AI-driven content solutions for marketing."
   },
 ];
