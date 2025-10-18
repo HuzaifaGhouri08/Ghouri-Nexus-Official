@@ -21,13 +21,13 @@ const team = [
   {
     name: "Huzaifa Ghouri",
     role: "Founder & CEO",
-    image: "/team/huzaifa.jpeg",
+    image: "/huzaifa.jpeg",
     description: "Visionary leader in business strategy and brand launching, Agentic AI engineer, Full-stack web developer."
   },
   {
     name: "Michael Jordan",
     role: "Operations Manager",
-    image: "team/michael.jpeg",
+    image: "michael.jpeg",
     description: "Optimizes workflows, manages critical resources, and significantly improves operational efficiency."
   },
   {
