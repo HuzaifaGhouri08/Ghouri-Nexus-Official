@@ -1,5 +1,5 @@
 # GHOURI NEXUS 🏬
-## **Our Official Site:** Driving Your Digital Success.
+### **Our Official Site:** Driving Your Digital Success.
 
 We are Ghouri Nexus, and we proudly present our official site as the gateway to your next level of digital achievement. Founded by Huzaifa Ghouri, our core mission is simple: to drive your digital success through innovative technology and strategic expertise
 
@@ -14,5 +14,4 @@ We deliver comprehensive, end-to-end solutions designed for modern growth. Our e
 At `Ghouri Nexus` we don't just build; we deliver innovative growth strategies that transform your business.
 
 # Connect With US
-**Ready to transform your business?** Visit our official site www.ghourinexus.com to learn more about our solutions, view our portfolio, and start your journey toward digital success today.
-Official Website http://www.ghourinexus.com/
+**Ready to transform your business?** Visit our official site [Ghouri Nexus](https:/ghourinexus.com/) to learn more about our solutions, view our portfolio, and start your journey toward digital success today.
