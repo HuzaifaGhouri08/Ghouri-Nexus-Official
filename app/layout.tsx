@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/logo.png" type="image/png" />
+        <link rel="icon" href="/mlogo.png" type="image/png" />
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
