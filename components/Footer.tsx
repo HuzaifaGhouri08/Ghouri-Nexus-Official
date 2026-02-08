@@ -67,7 +67,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Ghouri Nexus. All rights reserved. |
+            © 2026 Ghouri Nexus. All rights reserved. |
             <span className="text-cyan-400"> ghourinexus.com</span>
           </p>
         </div>
