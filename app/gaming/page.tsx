@@ -18,8 +18,8 @@ export default function Gaming() {
   });
   const [finished, setFinished] = useState(false);
 
-  // 🎯 Target launch date (1st Oct 2025)
-  const targetTime = useMemo(() => new Date("2026-02-01T00:00:00").getTime(), []);
+  // 🎯 Target launch date (20th Of August 2026)
+  const targetTime = useMemo(() => new Date("2026-08-01T00:00:00").getTime(), []);
 
   useEffect(() => {
     const timer = setInterval(() => {
