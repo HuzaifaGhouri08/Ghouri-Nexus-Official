@@ -61,9 +61,9 @@ export default function Gaming() {
             <span className="gradient-text">Gaming Universe</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto mb-10">
-           🧠 We’re almost live!<br>
-The Weekly Brain Challenge by Ghouri Nexus 👑 is about to launch.<br>
-Think you’re smart enough? Prove it. 🧠💥<br>
+           🧠 We’re almost live!
+The Weekly Brain Challenge by Ghouri Nexus 👑 is about to launch.
+Think you’re smart enough? Prove it. 🧠💥
 Get ready for weekly riddles, intense competition, and real rewards. 🚀
           </p>
           </div>
