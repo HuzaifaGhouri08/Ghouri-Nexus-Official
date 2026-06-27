@@ -61,7 +61,10 @@ export default function Gaming() {
             <span className="gradient-text">Gaming Universe</span>
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto mb-10">
-            Our first game releases are just around the corner. Get ready for an amazing gaming experience! 🚀
+           🧠 We’re almost live!<br>
+The Weekly Brain Challenge by Ghouri Nexus 👑 is about to launch.<br>
+Think you’re smart enough? Prove it. 🧠💥<br>
+Get ready for weekly riddles, intense competition, and real rewards. 🚀
           </p>
           </div>
           {!finished ? (
@@ -93,7 +96,7 @@ export default function Gaming() {
                 </div>
                <a href="/contact" rel="noopener noreferrer">
   <Button size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-    <Calendar className="mr-2 h-5 w-5" /> Get Notified
+    <Calendar className="mr-2 h-5 w-5" /> Register Now
   </Button>
 </a>
               </CardContent>
@@ -128,7 +131,7 @@ export default function Gaming() {
             },
             {
               title: "Community Driven",
-              desc: "Join guilds, chat, and grow together in a vibrant ecosystem.",
+              desc: "Participate, battle, conquer, and win real prizes.",
               icon: <Gamepad2 className="h-10 w-10 text-emerald-400" />,
               badge: "Social"
             },
